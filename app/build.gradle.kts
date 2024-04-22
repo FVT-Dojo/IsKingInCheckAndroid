@@ -67,8 +67,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    androidTestImplementation(libs.androidx.espresso.core)
-
     androidTestImplementation("io.cucumber:cucumber-android:7.14.0")
     androidTestImplementation("io.cucumber:cucumber-picocontainer:7.16.1")
 }
