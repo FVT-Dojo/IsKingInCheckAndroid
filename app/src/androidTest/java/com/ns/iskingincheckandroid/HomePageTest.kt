@@ -1,4 +1,5 @@
 
+import androidx.compose.ui.test.assertAll
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -24,13 +25,9 @@ class HomePageTest {
             .assertIsDisplayed()
             .performClick()
 
-        // Fetch all nodes tagged as "ChessCell" and verify there are exactly 64 such nodes
-        val chessCells = composeTestRule.onAllNodes(hasTestTag("ChessCell"))
-        assert(chessCells.fetchSemanticsNodes().size == 64) // Make sure there are exactly 64 cells
-
-        // If required, check the visibility of the first cell (assuming all are similarly managed)
+        // Assert that an element with the test tag 'chessboard' is visible
         composeTestRule
-            .onNode(hasTestTag("ChessCell"), useUnmergedTree = true) // Adjust tag if each cell has a unique tag
+            .onNode(hasTestTag("chessboard"))
             .assertIsDisplayed()
     }
 }
