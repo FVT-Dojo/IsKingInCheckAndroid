@@ -1,13 +1,9 @@
-package com.ns.iskingincheckandroid
+package com.ns.beautifulscreens
 
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.hasTestTag
-import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.onAllNodesWithTag
-import androidx.compose.ui.test.junit4.ComposeTestRule
 import org.junit.Rule
 import org.junit.Test
 

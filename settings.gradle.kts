@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         google {
@@ -21,4 +23,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "IsKingInCheckAndroid"
 include(":app")
+include(":beautifulscreens")
  

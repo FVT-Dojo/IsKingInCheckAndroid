@@ -1,18 +1,15 @@
 plugins {
-    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.paparazzi)
 }
 
 android {
-    namespace = "com.ns.iskingincheckandroid"
+    namespace = "com.ns.beautifulscreens"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ns.iskingincheckandroid"
         minSdk = 34
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -50,6 +47,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -58,7 +56,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(project(":beautifulscreens"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
 

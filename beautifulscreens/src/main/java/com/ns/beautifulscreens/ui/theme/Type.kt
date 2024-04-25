@@ -1,4 +1,4 @@
-package com.ns.iskingincheckandroid.ui.theme
+package com.ns.beautifulscreens.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
