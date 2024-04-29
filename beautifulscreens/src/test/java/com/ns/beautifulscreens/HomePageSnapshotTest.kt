@@ -11,15 +11,14 @@ class HomePageSnapshotTest {
     @Test
     fun testGameStartScreenWithButton() {
         paparazzi.snapshot {
-            GameStartScreenPreview()
+            GameStartScreenButtonPreview()
         }
     }
 
-//    @Test
-//    fun testGameStartScreenWithChessboard() {
-//        paparazzi.snapshot {
-//            GameStartScreen("I already started, keep up!")
-//                .also { /* Here the magic happens and the chessboard is visible */ }
-//        }
-//    }
+    @Test
+    fun testGameStartScreenWithChessboard() {
+        paparazzi.snapshot {
+            GameStartScreenChessboardPreview()
+        }
+    }
 }

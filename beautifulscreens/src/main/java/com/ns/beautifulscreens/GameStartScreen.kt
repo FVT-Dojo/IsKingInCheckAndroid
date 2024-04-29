@@ -16,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.ns.beautifulscreens.ui.theme.IsKingInCheckAndroidTheme
 
 @Composable
-fun GameStartScreen(buttonText: String) {
-    var showChessboard by remember { mutableStateOf(false) }
+fun GameStartScreen(chessboardVisible: Boolean) {
+    var showChessboard by remember { mutableStateOf(chessboardVisible) }
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -26,7 +26,7 @@ fun GameStartScreen(buttonText: String) {
     ) {
         if (!showChessboard) {
             Button(onClick = { showChessboard = true }) {
-                Text(buttonText)
+                Text("Start the game, hombre!")
             }
         } else {
             Chessboard()
@@ -34,10 +34,19 @@ fun GameStartScreen(buttonText: String) {
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
-fun GameStartScreenPreview() {
+fun GameStartScreenButtonPreview() {
     IsKingInCheckAndroidTheme {
-        GameStartScreen("Start the game, hombre!")
+        GameStartScreen(false)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GameStartScreenChessboardPreview() {
+    IsKingInCheckAndroidTheme {
+        GameStartScreen(true)
     }
 }
