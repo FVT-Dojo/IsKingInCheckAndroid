@@ -17,6 +17,9 @@
       <entry key="paparazzi">
         <State />
       </entry>
+      <entry key="chessboard">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
