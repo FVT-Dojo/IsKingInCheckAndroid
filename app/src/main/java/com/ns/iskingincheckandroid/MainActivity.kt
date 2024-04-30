@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GameStartScreen("Start the game, hombre!")
+                    GameStartScreen(false)
                 }
             }
         }
