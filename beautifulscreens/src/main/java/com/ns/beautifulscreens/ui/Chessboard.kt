@@ -7,8 +7,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.ns.beautifulscreens.R
 import com.ns.beautifulscreens.model.ChessboardState
 
 @Composable
@@ -38,10 +42,19 @@ fun ChessCell(i: Int, j: Int, piece: String) {
         color = if ((i + j) % 2 == 0) Color.LightGray else Color.DarkGray
     ) {
         if (piece.isNotEmpty()) {
+            val icon = when (piece) {
+                "K" -> "\u265A" // Unicode for the King icon (replace with actual Unicode or image resource)
+                "Q" -> "\u265B" // Unicode for the Queen icon
+                "R" -> "\u265C" // Unicode for the Rook icon
+                // ... add mappings for other pieces ...
+                else -> piece  // Keep the default text if no icon is found
+            }
             Text(
-                text = piece,
+                text = icon,
                 color = if ((i + j) % 2 == 0) Color.Black else Color.White,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier.padding(8.dp),
+                fontFamily = FontFamily(Font(R.font.chess_merida_unicode)
+                fontSize = 24.sp)
             )
         }
     }
