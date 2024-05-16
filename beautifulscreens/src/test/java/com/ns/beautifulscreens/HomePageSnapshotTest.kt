@@ -1,6 +1,7 @@
 package com.ns.beautifulscreens
 
 import app.cash.paparazzi.Paparazzi
+import com.ns.beautifulscreens.ui.GameStartScreenButtonPreview
 import org.junit.Rule
 import org.junit.Test
 

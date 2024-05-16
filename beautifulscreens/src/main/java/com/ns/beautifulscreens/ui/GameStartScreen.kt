@@ -1,4 +1,4 @@
-package com.ns.beautifulscreens
+package com.ns.beautifulscreens.ui
 
 import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
@@ -16,8 +16,9 @@ import com.ns.beautifulscreens.ui.theme.IsKingInCheckAndroidTheme
 import com.ns.beautifulscreens.viewmodel.GameStartViewModel
 
 @Composable
-fun GameStartScreen(viewModel: GameStartViewModel = viewModel()) {
+fun GameStartScreen(viewModel: GameStartViewModel) {
     val showChessboard = viewModel.showChessboard.collectAsState().value
+    val chessboardState = viewModel.chessboardState.collectAsState().value
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -26,21 +27,21 @@ fun GameStartScreen(viewModel: GameStartViewModel = viewModel()) {
     ) {
         if (!showChessboard) {
             Button(onClick = {
-                Log.d("Button", "Someone poked the mexican!")
                 viewModel.startGame()
             }) {
                 Text("Start the game, hombre!")
             }
         } else {
-            Chessboard()
+            Chessboard(chessboardState)
         }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GameStartScreenChessboardPreview() {
+fun GameStartScreenButtonPreview() {
+    val viewModel: GameStartViewModel = GameStartViewModel()
     IsKingInCheckAndroidTheme {
-        GameStartScreen()
+        GameStartScreen(viewModel)
     }
 }
