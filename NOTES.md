@@ -7,7 +7,13 @@ Pomodoro iDunno:
     - ✅ Create snapshot test with paparazzi
     - ✅ Add first API call
 
+Pomodoro 1 16-05-2024:
+- Identify what needs to be done to refactor to MVVM
+  - ✅MainActivity.kt looks fine for now
+  - ✅Create a ViewModel for GameStart
+  - ✅Use the ViewModel in the GameStartScreen
+  - ✅Removed duplicate preview
+  - 🍅Somehow, the pieces are no longer visible on the chessboard. Fix!
+
 TODO:
     - Update E2E test to include a mock of the API, such that the chessboard shows the pieces
-    - After this works, extract ugly logic from the screen to more adhere to MVVM / MVC / whatever
-        and to be able to unit test the pieces.

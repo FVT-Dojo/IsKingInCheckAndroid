@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.converter.gson)
     // Coroutine Adapter for Retrofit
     implementation(libs.retrofit2.kotlin.coroutines.adapter)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
 
