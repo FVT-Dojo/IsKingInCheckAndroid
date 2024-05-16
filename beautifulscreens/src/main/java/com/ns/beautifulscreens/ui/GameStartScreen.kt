@@ -1,9 +1,6 @@
 package com.ns.beautifulscreens.ui
 
-import android.util.Log
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -11,6 +8,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ns.beautifulscreens.ui.theme.IsKingInCheckAndroidTheme
 import com.ns.beautifulscreens.viewmodel.GameStartViewModel
@@ -32,7 +30,19 @@ fun GameStartScreen(viewModel: GameStartViewModel) {
                 Text("Start the game, hombre!")
             }
         } else {
-            Chessboard(chessboardState)
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Chessboard(chessboardState)
+                Spacer(modifier = Modifier.height(16.dp))
+                Button(onClick = {
+                    viewModel.resetGame()
+                }) {
+                    Text("Back")
+                }
+            }
         }
     }
 }

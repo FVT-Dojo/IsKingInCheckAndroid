@@ -26,4 +26,9 @@ class GameStartViewModel : ViewModel() {
             _showChessboard.value = true
         }
     }
+
+    fun resetGame() {
+        _showChessboard.value = false
+        _chessboardState.value = null
+    }
 }

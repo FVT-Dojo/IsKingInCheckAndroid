@@ -28,8 +28,9 @@ Pomodoro 2 16-05-2024
 - ✅Refactor: moved ui elements to a ui folder to adhere to mvvm conventions
 - ✅Refactor: Chessboard composable: extracted cell and label logic to improve readability
 
+Pomodoro 3 16-05-2024
+- ✅Add a back button to be able to start a new game
 
 TODO:
-- Add a back button to be able to start a new game
 - Create a testing strategy for what we have until this point
 - Update E2E test to include a mock of the API, such that the chessboard shows the pieces
