@@ -31,6 +31,25 @@ Pomodoro 2 16-05-2024
 Pomodoro 3 16-05-2024
 - ✅Add a back button to be able to start a new game
 
-TODO:
-- Create a testing strategy for what we have until this point
-- Update E2E test to include a mock of the API, such that the chessboard shows the pieces
+Pomodoro 17-05-2024
+- ✅Decide on what to test
+
+# Testing backlog:
+- Unit test:
+  - ViewModel Tests: Ensure that your GameStartViewModel behaves as expected.
+    - Test the startGame function to verify it fetches the chessboard state and updates _showChessboard and _chessboardState. 
+    - Test the resetGame function to ensure it resets the state correctly.
+    
+  - Composable Functions: Although UI tests are usually not unit tests, you can use Compose testing to verify that composable functions behave correctly in isolation.
+    - Use createComposeRule to test the GameStartScreen, 
+    - Chessboard, 
+    - and ChessCell composable functions.
+
+- Integration test:
+  - ViewModel with Live Data: Test GameStartViewModel with mocked network responses to ensure it integrates correctly with the backend.
+  - Composable with ViewModel: Test composable functions like GameStartScreen with GameStartViewModel to ensure they display data correctly.
+
+- End to end test:
+  - Simulate User Actions: Test the full flow from starting the app, clicking buttons, and navigating through the UI.
+  - Verify UI Changes: Ensure the UI updates correctly based on user interactions and state changes.
+

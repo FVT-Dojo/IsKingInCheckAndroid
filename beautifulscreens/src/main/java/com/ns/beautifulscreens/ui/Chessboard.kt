@@ -54,7 +54,7 @@ fun ChessCell(i: Int, j: Int, piece: String) {
                 color = if ((i + j) % 2 == 0) Color.Black else Color.White,
                 modifier = Modifier.padding(8.dp),
                 fontFamily = FontFamily(Font(R.font.chess_merida_unicode)
-                fontSize = 24.sp)
+                )
             )
         }
     }
